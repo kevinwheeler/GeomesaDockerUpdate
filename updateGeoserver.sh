@@ -49,5 +49,5 @@ cp $1 /var/lib/docker/aufs/mnt/$FULL_ID/opt/geoserver-2.5.2/webapps/geoserver/WE
 cp $2 /var/lib/docker/aufs/mnt/$FULL_ID/opt/geoserver-2.5.2/webapps/geoserver/WEB-INF/lib/geomesa-plugin.jar
 
 docker exec tests-geoserver /opt/geoserver-2.5.2/bin/shutdown.sh
-docker exec tests-geoserver /opt/start-geoserver.sh
+docker exec tests-geoserver /opt/start-geoserver.sh &
 
