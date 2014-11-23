@@ -1,7 +1,9 @@
 #!/bin/bash
 #given a path to the distributed runtime jar on your computer, will copy it into the accumulo docker into the correct directory, however you must specifiy the file name that will be used in that output directory.
 #note there is a little asymmetry here, the first argument can be a full path to a file, the second is just a filename without any path.
-USAGE="Usage: ./script inputDistRuntimeFilename outputDisRuntimeFilename"
+#For the second argument, I use the same filename as is currently in docker as to overwrite the file in docker with a new one.
+# You can find the filename (2nd argument) by attaching to tests-accumulo, then running "ls $ACCUMULO_HOME/lib/ext"
+USAGE="Usage: ./script path/to/inputDistRuntime outputDistRuntimeFilename"
 if [ $# -ne 2 ]
   then
   echo $USAGE
