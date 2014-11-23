@@ -2,7 +2,7 @@
 #given a path to the distributed runtime jar on your computer, will copy it into the accumulo docker into the correct directory, however you must specifiy the file name that will be used in that output directory.
 #note there is a little asymmetry here, the first argument can be a full path to a file, the second is just a filename without any path.
 #For the second argument, I use the same filename as is currently in docker as to overwrite the file in docker with a new one.
-# You can find the filename (2nd argument) by attaching to tests-accumulo, then running "ls $ACCUMULO_HOME/lib/ext"
+# You can find the filename (2nd argument) by attaching to tests-accumulo, then running "ls $ACCUMULO_HOME/lib/ext" look for something like geomesa-distributed-runtime-accumulo1.5-1.0.0-SNAPSHOT.jar
 USAGE="Usage: ./script path/to/inputDistRuntime outputDistRuntimeFilename"
 if [ $# -ne 2 ]
   then
